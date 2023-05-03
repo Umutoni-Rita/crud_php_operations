@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 
      if ($result == TRUE) {
 
-        echo "Record deleted successfully.";
+        echo "Record deleted successfully <a href='read.php' class='btn btn-info'>Back Home</a>";
 
     }else{
 

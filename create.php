@@ -19,7 +19,7 @@ if(isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result == true) {
-        echo 'New record created succesfully';
+        header('location: read.php');
     } else {
         echo 'Error:'.$sql.'<br>'.conn -> error;
     }
@@ -27,8 +27,3 @@ if(isset($_POST['submit'])) {
 }
 
 ?>
-
-<html>
-    <a href="signup.html"><br><br>Back</a>
-    <a href="read.php"><br><br> View record from database</a>
-</html>
