@@ -19,6 +19,7 @@ if (isset($_GET['id'])) {
         echo "Error:" . $sql . "<br>" . $conn->error;
 
     }
+    
 
 } 
 

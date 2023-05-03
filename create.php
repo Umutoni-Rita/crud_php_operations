@@ -19,9 +19,9 @@ if(isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result == true) {
-        header('location: read.php');
+        header('location: login.php');
     } else {
-        echo 'Error:'.$sql.'<br>'.conn -> error;
+        echo 'Error:'.$sql.'<br>'.$conn -> error;
     }
     $conn -> close();
 }

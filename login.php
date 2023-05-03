@@ -12,7 +12,7 @@
         <input type="email" name="email" class="form-control"><br><br>
         <label for="password">Password:</label>
         <input type="password" name="password" class="form-control"><br><br>
-        <input type="submit" value="Login" class="btn btn-secondary">
+        <input type="submit" value="Login" name="submit" class="btn btn-secondary">
     </form>
     </div>
 </body>
@@ -25,9 +25,12 @@
     if(isset($_POST['submit'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $hashed_password = md5($password);
     }
 
-    $sql = "SELECT * FROM users WHERE email = '$username' AND password = '$password' ";
+    
+
+    $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$hashed_password' ";
 
     $result = mysqli_query($conn, $sql);
 
