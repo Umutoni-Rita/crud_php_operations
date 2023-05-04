@@ -75,7 +75,7 @@ if (isset($_GET['id'])) {
         </div>
         <div class="mb-3">
         Email:<br>
-        <input type="email" name="email" value="<?php echo $email; ?>" class="form-control">
+        <input type="email" name="email" value="<?php echo $email; ?>" class="form-control" readonly>
         <br></div>
         Password:<br>
         <input type="password" name="password" value="<?php echo $password; ?>" class="form-control">

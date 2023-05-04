@@ -5,3 +5,9 @@
 .btn-delete{
     background-color: rgb(243, 197, 157);
 }
+
+.btn-custom{
+    padding: 5px;
+    border: none;
+    background-color: rgb(142, 174, 232);
+}

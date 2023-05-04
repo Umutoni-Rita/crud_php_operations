@@ -19,7 +19,7 @@ if(isset($_POST['submit'])) {
     $result = mysqli_query($conn, $sql);
 
     if ($result == true) {
-        header('location: login.php');
+        header('location: login.html');
     } else {
         echo 'Error:'.$sql.'<br>'.$conn -> error;
     }
