@@ -28,6 +28,8 @@
         exit();
     } else {
         echo "Invalid username or password";
+        echo "<br />";
+        echo "<h3><a href='login.html'>Try again</a></h3>";
     }
 
 ?>

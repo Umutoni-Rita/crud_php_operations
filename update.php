@@ -78,7 +78,7 @@ if (isset($_GET['id'])) {
         <input type="email" name="email" value="<?php echo $email; ?>" class="form-control" readonly>
         <br></div>
         Password:<br>
-        <input type="password" name="password" value="<?php echo $password; ?>" class="form-control">
+        <input type="password" name="password" class="form-control">
         <div class="mb-3">
         Gender:<br>
         <input type="radio" name="gender" value="Male" <?php if($gender == 'Male'){ echo "checked";} ?> >Male
