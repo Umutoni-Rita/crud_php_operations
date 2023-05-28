@@ -1,13 +1,18 @@
-
-.btn-edit{
+.btn-edit {
     background-color: rgb(129, 238, 205);
 }
-.btn-delete{
+
+.btn-delete {
     background-color: rgb(243, 197, 157);
 }
 
-.btn-custom{
+.btn-custom {
     padding: 5px;
     border: none;
     background-color: rgb(142, 174, 232);
+}
+
+.btn-print {
+    background-color: rgb(3, 3, 69);
+    color: white;
 }

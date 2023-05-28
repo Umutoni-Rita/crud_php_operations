@@ -1,6 +1,4 @@
-
-
-<?php 
+<?php
 
 include "connection.php";
 
@@ -17,9 +15,9 @@ $result = $conn->query($sql);
 <head>
 
     <title>View Users</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
 </head>
 
@@ -27,74 +25,74 @@ $result = $conn->query($sql);
 
     <div class="container">
         <br><br>
-    <button class="btn btn-secondary"> <a href="index.html">Add User</a> </button>
+        <button class="btn btn-secondary"> <a href="index.html">Add User</a> </button>
         <h2>View All Users</h2>
 
-<table class="table table-striped table-hover">
+        <table class="table table-striped table-hover">
 
-    <thead>
+            <thead>
 
-        <tr>
+                <tr>
 
-        <th>ID</th>
+                    <th>ID</th>
 
-        <th>First Name</th>
+                    <th>First Name</th>
 
-        <th>Last Name</th>
+                    <th>Last Name</th>
 
-        <th>Email</th>
+                    <th>Email</th>
 
-        <th>Gender</th>
+                    <th>Gender</th>
 
-        <th>Action</th>
+                    <th>Action</th>
 
-    </tr>
+                </tr>
 
-    </thead>
+            </thead>
 
-    <tbody> 
+            <tbody>
+                <button onclick="print()" class="btn btn-print">Print Page</button>
 
-        <?php
+                <?php
 
-            if ($result->num_rows > 0) {
+                if ($result->num_rows > 0) {
 
-                while ($row = $result->fetch_assoc()) {
-        ?>
+                    while ($row = $result->fetch_assoc()) {
+                ?>
 
-                    <tr>
+                        <tr>
 
-                    <td><?php echo $row['id']; ?></td>
+                            <td><?php echo $row['id']; ?></td>
 
-                    <td><?php echo $row['fname']; ?></td>
+                            <td><?php echo $row['fname']; ?></td>
 
-                    <td><?php echo $row['lname']; ?></td>
+                            <td><?php echo $row['lname']; ?></td>
 
-                    <td><?php echo $row['email']; ?></td>
+                            <td><?php echo $row['email']; ?></td>
 
-                    <td><?php echo $row['gender']; ?></td>
+                            <td><?php echo $row['gender']; ?></td>
 
-                    <td>
-                        <a class="btn btn-edit" href="update.php?id=<?php echo $row['id']; ?>">
-                        <span class="material-symbols-rounded">edit</span>
-                        </a>&nbsp;
-                        <a class="btn btn-delete" href="delete.php?id=<?php echo $row['id']; ?>">
-                        <span class="material-symbols-rounded">delete</span>
-                        </a>
-                    </td>
+                            <td>
+                                <a class="btn btn-edit" href="update.php?id=<?php echo $row['id']; ?>">
+                                    <span class="material-symbols-rounded">edit</span>
+                                </a>&nbsp;
+                                <a class="btn btn-delete" href="delete.php?id=<?php echo $row['id']; ?>">
+                                    <span class="material-symbols-rounded">delete</span>
+                                </a>
+                            </td>
 
-                    </tr>                       
+                        </tr>
 
-        <?php       }
+                <?php       }
+                }
 
-            }
+                ?>
 
-        ?>                
+            </tbody>
 
-    </tbody>
+        </table>
 
-</table>
-
-    </div> 
+    </div>
 
 </body>
 
